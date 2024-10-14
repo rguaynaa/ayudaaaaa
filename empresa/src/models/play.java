@@ -12,7 +12,7 @@ import view.proceso;
  *
  * @author rodrigo
  */
-public class play {
+public class play extends Thread{
     private volatile boolean esam=true;
     private timer timerp;
     private proceso vtn_hilos;
@@ -21,6 +21,7 @@ public class play {
     private int tiempo2;
     private int tiempo3;
     private productos producto;
+    int contador_repeticiones = 0;
 
     public play(proceso vtn_hilos, timer timep, int repetir, int t1, int t2, int t3) {
         this.vtn_hilos = vtn_hilos;
@@ -35,8 +36,9 @@ public class play {
     }
     
    public void run(){
+       
         try {
-            int contador_repeticiones = 0;
+            
             while (esam) {
                 SwingUtilities.invokeLater(() -> {
                     this.vtn_hilos.lblRepeticion.setText(contador_repeticiones + "/" + this.repetir);

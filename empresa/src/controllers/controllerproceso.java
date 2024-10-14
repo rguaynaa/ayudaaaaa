@@ -31,7 +31,7 @@ public class controllerproceso {
        time.start();
        iniciar.start();
     }
-    private void inicializar(){
+    public void inicializar(){
         visualizacion.setVisible(true);
         
     }

@@ -4,6 +4,8 @@
  */
 package view;
 
+import controllers.controllerproceso;
+
 /**
  *
  * @author rodrigo
@@ -30,7 +32,7 @@ public class producir extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jtcodigo = new javax.swing.JTextField();
         jtcantidad = new javax.swing.JTextField();
-        btnproducir = new javax.swing.JButton();
+        btnprodu = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -54,11 +56,11 @@ public class producir extends javax.swing.JFrame {
             }
         });
 
-        btnproducir.setFont(new java.awt.Font("Optima", 3, 24)); // NOI18N
-        btnproducir.setText("Producir");
-        btnproducir.addActionListener(new java.awt.event.ActionListener() {
+        btnprodu.setFont(new java.awt.Font("Optima", 3, 24)); // NOI18N
+        btnprodu.setText("Producir");
+        btnprodu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnproducirActionPerformed(evt);
+                btnproduActionPerformed(evt);
             }
         });
 
@@ -79,7 +81,7 @@ public class producir extends javax.swing.JFrame {
                             .addComponent(jtcantidad, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(23, 23, 23)
-                        .addComponent(btnproducir, javax.swing.GroupLayout.PREFERRED_SIZE, 271, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(btnprodu, javax.swing.GroupLayout.PREFERRED_SIZE, 271, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(127, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -94,7 +96,7 @@ public class producir extends javax.swing.JFrame {
                     .addComponent(jLabel2)
                     .addComponent(jtcantidad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(32, 32, 32)
-                .addComponent(btnproducir)
+                .addComponent(btnprodu)
                 .addContainerGap(71, Short.MAX_VALUE))
         );
 
@@ -109,11 +111,12 @@ public class producir extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jtcantidadActionPerformed
 
-    private void btnproducirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnproducirActionPerformed
+    private void btnproduActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnproduActionPerformed
         proceso proceso=new proceso();
         proceso.setVisible(true);
         this.dispose();
-    }//GEN-LAST:event_btnproducirActionPerformed
+        
+    }//GEN-LAST:event_btnproduActionPerformed
 
     /**
      * @param args the command line arguments
@@ -152,7 +155,7 @@ public class producir extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    public javax.swing.JButton btnproducir;
+    public javax.swing.JButton btnprodu;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     public javax.swing.JTextField jtcantidad;

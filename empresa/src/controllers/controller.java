@@ -28,7 +28,7 @@ public class controller implements ActionListener {
         vtnprodu.setVisible(true);
         vtnprodu.setLocationRelativeTo(null);
         vtnprodu.setResizable(false);
-        vtnprodu.btnproducir.addActionListener(this);
+        vtnprodu.btnprodu.addActionListener(this);
          
         
     }
@@ -46,7 +46,7 @@ public class controller implements ActionListener {
     }
     @Override
     public void actionPerformed(ActionEvent e){
-        if(e.getSource()==vtnprodu.btnproducir){
+        if(e.getSource()==vtnprodu.btnprodu){
             inicializar();
         }
     }
